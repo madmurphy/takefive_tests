@@ -1,0 +1,253 @@
+/* Originally based on: https://tabatkins.github.io/specs/css-aliases/ */
+
+:root {
+	counter-reset: exampleno figureno issueno h2no h3no h4no;
+}
+
+/* General structural markup */
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: left;
+}
+
+h1, h2, h3 {
+	color: #005A9C;
+}
+
+h1 {
+	font: 200% sans-serif;
+}
+
+h2 {
+	counter-increment: h2no;
+	font: 140% sans-serif;
+}
+
+h3 {
+	counter-increment: h3no;
+	font: 120% sans-serif;
+}
+
+h4 {
+	counter-increment: h4no;
+	font: bold 110% sans-serif;
+}
+
+h5 {
+	font: bold 100% sans-serif;
+}
+
+h6 {
+	font: italic 100% sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: 3em;
+}
+
+h1 + h2 {
+	margin-top: 0em;
+}
+
+h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+	margin-top: 1.2em;
+}
+
+pre {
+	margin: 1em 0 1em 2em;
+}
+
+pre, code, .plain-text {
+	font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+	font-size: .9em;
+}
+
+dt dfn code {
+	font-size: inherit;
+}
+
+dfn {
+	font-weight: bolder;
+}
+
+s, del {
+	text-decoration: line-through;
+	color: red;
+}
+
+u, ins {
+	text-decoration: underline;
+	background: #bfa;
+}
+
+sup {
+	vertical-align: super;
+	font-size: 80%
+}
+
+details {
+	display: block;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1em 2em;
+}
+
+ul, ol {
+	margin-left: 0;
+	padding-left: 2em;
+}
+
+li {
+	margin: 0.25em 2em 0.5em 0;
+	padding-left: 0;
+}
+
+/* Links */
+
+a[href], a[href]:visited {
+	color: inherit;
+	border-bottom: 1px solid silver;
+	text-decoration: none;
+}
+
+a[href]:hover {
+	background: #ffa;
+}
+
+a[href]:active {
+	color: #C00;
+	background: transparent;
+}
+
+details > summary > * {
+	display: inline;
+	margin: 0;
+}
+
+/* Figures */
+
+figure {
+	display: block;
+	text-align: center;
+	margin: 2.5em 0;
+}
+
+figure pre {
+	text-align: left;
+	display: table;
+	margin: 1em auto;
+}
+
+figure table {
+	margin: auto;
+}
+
+figure img, figure object {
+	display: block;
+	margin: auto;
+	max-width: 100%
+}
+
+mark {
+	border: none;
+}
+
+
+@media only screen {
+
+	body {
+		background: white;
+		/* background-image: floating-margin-image-goes-here; */
+		background-position: top left;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		color: black;
+		font-family: sans-serif;
+		line-height: 1.5;
+		margin: 0 auto;
+		max-width: 50em;
+		padding: 2em 1em 2em 70px;
+	}
+
+	figure img, figure object {
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .6);
+	}
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+	body {
+		padding: 2em;
+	}
+
+}
+
+
+@media only print {
+
+	@page {
+		margin: 2.25cm;
+	}
+
+	body {
+		background: white;
+		/* background-image: floating-margin-image-goes-here; */
+		background-position: top left;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		color: black;
+		font-family: sans-serif;
+		line-height: 1.5;
+		margin: 0 auto;
+		max-width: 50em;
+		padding: 2em 1em;
+		text-align: justify;
+	}
+
+	html {
+		margin: 0 !important;
+	}
+
+	body {
+		font-family: serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		break-after: avoid;
+	}
+
+	h1, h2, h3, h4, h5, h6, figure, img {
+		break-inside: avoid;
+	}
+
+	th, td {
+		font-family: inherit;
+	}
+
+	a {
+		color: inherit !important;
+	}
+
+	a:link, a:visited {
+		text-decoration: none !important;
+		border-bottom: none !important;
+
+	}
+
+	a:link::after, a:visited::after {
+		/* create a cross-ref "see..." */;
+	}
+
+}
+
+
+/*  EOF  */
+

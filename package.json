@@ -1,0 +1,43 @@
+{
+	"name": "Take Five!",
+	"version": "3.1.5",
+	"description": "The most advanced pure CSS lightbox \u2014 not one single line of JavaScript has been wasted",
+	"author": "madmurphy333@gmail.com",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://madmurphy.github.io/takefive.css",
+	"style": "dist/takefive.min.css",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/madmurphy/takefive.css.git"
+	},
+	"bugs": {
+		"url": "https://github.com/madmurphy/takefive.css/issues",
+		"email": "madmurphy333@gmail.com"
+	},
+	"src": [
+		"dev",
+		"dist"
+	],
+	"keywords": [
+		"css",
+		"css-gallery",
+		"css-lightbox",
+		"css-only",
+		"css-slide-renderer",
+		"css3",
+		"css3-animations",
+		"html-semantics",
+		"html5",
+		"html5-elements",
+		"image-gallery",
+		"lightbox",
+		"microdata",
+		"microformats",
+		"microformats2",
+		"pure-css",
+		"rdfa",
+		"schema-org",
+		"slide-renderer",
+		"slides"
+	]
+}
