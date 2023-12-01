@@ -58,7 +58,7 @@
 		for (var nIdx = 0, nLen = aSlides.length; nIdx < nLen; nIdx++) {
 
 			aSlides[nIdx].addEventListener('touchstart', handleTouchStart, false);
-			aSlides[nIdx].addEventListener('touchend', handleTouchMove, false);
+			aSlides[nIdx].addEventListener('touchmove', handleTouchMove, false);
 
 		}
 
